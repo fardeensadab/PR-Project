@@ -35,7 +35,7 @@ This repository implements:
 ### Notebook Breakdown
 
 * **`pr-project.ipynb`**
-* **Data Cleaning & Preprocessing:** Filters the $5 \times 64 \times 64$ GalaxiesML catalog to $204,573$ valid sources ($0 < z \le 4$, finite magnitudes), applies $\operatorname{arcsinh}$ dynamic-range compression, and computes per-band standardization using strictly bright-training statistics.
+* **Data Cleaning & Preprocessing:** Filters the $5 \times 64 \times 64$ GalaxiesML catalog to $204,573$ valid sources ($0 < z \le 4$, finite magnitudes), applies $arcsinh$ dynamic-range compression, and computes per-band standardization using strictly bright-training statistics.
 * **Controlled Shift Split:** Partitions galaxies at the median $r$-band magnitude ($r = 20.31$) into bright (train / validation / calibration / ID-test) and faint (OOD-test, $N = 18,000$) pools.
 * **Model Training & Ablations:** Trains the heteroscedastic Gaussian baseline and the seeded ResNet-SE ablation grid (`Image-only`, `+ Photometry`, and `Full (+ LDS)`).
 
